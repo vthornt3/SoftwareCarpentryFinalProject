@@ -97,11 +97,9 @@ gible_tournament_final_image = pygame.transform.scale(gible_tournament_final_ima
 in_tournament = False
 current_tournament_part = 0
 game_over = False
-
 # Scale images
 gible_battle_images = [pygame.transform.scale(img, (screen_width, screen_height)) for img in gible_battle_images]
 lapras_battle_images = [pygame.transform.scale(img, (screen_width, screen_height)) for img in lapras_battle_images]
-
 # New game states
 training_gible = False
 training_lapras = False
@@ -468,8 +466,6 @@ while running:
                             #Add logic for training with Riolu
                         elif event.key == pygame.K_2:
                             choice3_selected = "catch_pokemon"
-                            # Add logic for catching new Pokemon
-            # Inside the game loop
             if choice3_selected == "train_riolu":
                 if not training_sequence_started:
                     training_sequence_started = True  # Start the training sequence
@@ -528,7 +524,6 @@ while running:
                     screen.blit(game_over_text, (screen_width // 2 - game_over_text.get_width() // 2,
                                                  screen_height // 2 - game_over_text.get_height() // 2))
 
-            # Inside your game loop
             if choice3_selected == "catch_pokemon":
                 if not catching_pokemon_sequence:
                     catching_pokemon_sequence = True
@@ -864,7 +859,7 @@ while running:
                                 game_over_text = font.render("GAME OVER", True, WHITE)
                                 screen.blit(game_over_text, (screen_width // 2 - game_over_text.get_width() // 2,
                                                              screen_height // 2 - game_over_text.get_height() // 2))
-                            # Inside your game loop
+
             if choice3_selected == "catch_pokemon":
                 if not catching_pokemon_sequence:
                     catching_pokemon_sequence = True
